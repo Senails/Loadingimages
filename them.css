@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    padding-top: 20px 0;
+    min-height: 100vh;
+    background-color: rgb(35, 35, 35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.conteiner {
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 800px;
+    min-height: 80px;
+    background-color: white;
+}
+
+.conteiner h1 {
+    margin-left: 20px;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    color: rgb(74, 74, 74);
+    border: 2px solid rgb(90, 90, 90);
+    font-size: 22px;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    margin-right: 15px;
+}
+
+.btn:nth-child(2) {
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+.btn:hover {
+    border: 2px solid rgb(41, 199, 120);
+    color: rgb(47, 158, 102);
+    background-color: rgb(255, 255, 255);
+}
+
+input#file {
+    display: none;
+}
+
+.preview {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.previewimage {
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.567);
+    width: 175px;
+    height: 98px;
+    margin-top: 16px;
+    margin-right: 8px;
+    margin-left: 7px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.previewimage.removing {
+    width: 0px;
+    transform: scale(0);
+    transition: 0.3s;
+}
+
+.remove {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.50);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.previewimage:hover .remove {
+    opacity: 1;
+}
+
+.previewimage:hover .info {
+    opacity: 1;
+}
+
+.info {
+    box-sizing: border-box;
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    font-size: 12px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.50);
+    transition: 0.5s;
+    display: flex;
+    padding: 0 5px;
+    line-height: 20px;
+    justify-content: space-between;
+}
+
+.info.show {
+    opacity: 1;
+}
+
+.info span:nth-child(1) {
+    width: 70%;
+    overflow: hidden;
+}
+
+.progres {
+    position: absolute;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(71, 141, 106);
+    transition: 0.33s;
+    text-align: center;
+}
+
+.url {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    display: block;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    height: 78px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.493);
+    font-size: 14px;
+}
+
+.aboutme {
+    position: fixed;
+    right: 1vh;
+    top: 30vh;
+    height: 11vh;
+    width: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aboutme a {
+    height: 5vh;
+    width: 5vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.aboutme a:nth-child(1) {
+    background-image: url('./assets/git.png');
+}
+
+.aboutme a:nth-child(2) {
+    background-image: url('./assets/sen.png');
+}
+
+@media (max-width: 800px) {
+    .conteiner {
+        width: 610px;
+    }
+}
+
+@media (max-width: 625px) {
+    .conteiner {
+        width: 430px;
+    }
+}
